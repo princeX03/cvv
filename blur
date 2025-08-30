@@ -1,0 +1,22 @@
+Image Smoothing &; Blurring Codes
+Lab-3: To perform Image Smoothing and Blurring usingPython OpenCV
+
+✅ Example Code: Image Smoothing and Blurring in Python (Using OpenCV)
+
+Gaussian Blur Example-
+
+import cv2
+import numpy as np
+# Load the image
+image = cv2.imread(&#39;your_image.jpg&#39;)
+# Check if image loaded successfully
+if image is None:
+print(&quot;Error: Could not load image.&quot;)
+# Apply Gaussian blurring with a 5x5 kernel and sigmaX=0 (auto-calculated)
+blurred_gaussian = cv2.GaussianBlur(image, (5, 5), 0)
+# Display the original and blurred images
+
+cv2.imshow(&#39;Original Image&#39;, image)
+cv2.imshow(&#39;Gaussian Blurred Image&#39;, blurred_gaussian)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
